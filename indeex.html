@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ольга Шахова — Тренер Soft & Hard Skills</title>
+    <style>
+        :root {
+            --main-blue: #aed6f1;
+            --dark-text: #4a4a4a;
+            --light-bg: #ffffff;
+            --gray-bg: #f8f9fa;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Блок 1: Главная */
+        #hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .badge {
+            background-color: var(--main-blue);
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        .badge h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+        .badge p {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .hero-quote {
+            font-style: italic;
+            font-size: 1.4rem;
+            margin-top: 20px;
+            color: #666;
+        }
+        .hero-img {
+            flex: 1;
+            text-align: right;
+        }
+        .hero-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            object-position: 40% 20%;
+            border-radius: 4px;
+        }
+
+        /* Блок 2: 5 Причин */
+        h2.section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .reasons-list {
+            list-style: none;
+        }
+        .reasons-list li {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        .reasons-list strong {
+            color: #000;
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* Блок 3: Концепция */
+        #concept {
+            background-color: var(--gray-bg);
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .concept-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .concept-text p {
+            margin-bottom: 20px;
+        }
+
+        /* Блок 4: Темы обучения */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .skill-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .skill-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid var(--main-blue);
+            padding-bottom: 10px;
+        }
+        .skill-card ul {
+            list-style: none;
+        }
+        .skill-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .skill-card ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Блок 5: Стоимость */
+        .price-box {
+            background: var(--gray-bg);
+            padding: 30px;
+            margin-top: 40px;
+            border-left: 5px solid var(--main-blue);
+        }
+        .price-list {
+            margin-top: 20px;
+            list-style: none;
+        }
+        .price-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ccc;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Блок 6: Контакты */
+        #contacts {
+            text-align: center;
+            background: var(--main-blue);
+            color: #fff;
+        }
+        #contacts h2, #contacts p {
+            color: #fff;
+        }
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+        .contact-info a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            #hero { flex-direction: column; text-align: center; }
+            .hero-img { text-align: center; }
+            .price-list li { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Блок 1: Главная -->
+        <section id="hero">
+            <div class="hero-text">
+                <div class="badge">
+                    <h1>ОЛЬГА ШАХОВА</h1>
+                    <p>Тренер Soft & Hard Skills</p>
+                </div>
+                <p class="hero-quote">«Эффективность личности для командных достижений. Системный подход».</p>
+            </div>
+            <div class="hero-img">
+                <img src="photo1.jpg" alt="Ольга Шахова">
+            </div>
+        </section>
+        <!-- Блок 2: 5 Причин -->
+        <section id="reasons">
+            <h2 class="section-title">5 причин доверить обучение сотрудников мне</h2>
+            <ul class="reasons-list">
+                <li><strong>1. Профильное образование:</strong> Высшее образование «Менеджмент», диплом о проф. переподготовке «Мастерство ведения тренинга».</li>
+                <li><strong>2. Практик с фундаментом:</strong> Карьерный рост от мерчандайзера до руководителя отдела продаж в FMCG (13 лет в продажах, 6 лет в управлении). Я знаю, что привело меня к успеху, и эффективно обучаю этому.</li>
+                <li><strong>3. Архитектор команд:</strong> Создавала отделы продаж «с нуля», настраивая процессы и раскрывая потенциал.</li>
+                <li><strong>4. Системный подход:</strong> Практикую методы, формирующие способность к метаобучению. Помогаю ученикам найти кратчайший путь от «хочу» к результату.</li>
+                <li><strong>5. Фокус на человеке:</strong> Повышаю самомотивацию учеников. Помогаю развивать гибкие навыки как основу личной и командной эффективности.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Блок 3: Концепция -->
+    <section id="concept">
+        <div class="container">
+            <!-- Интегрированная вторая фотография с автоматической обрезкой под формат презентации -->
+            <div style="width: 100%; max-width: 800px; height: 350px; margin: 0 auto 30px auto; overflow: hidden; border-radius: 4px;">
+                <img src="photo2.jpg" alt="Процесс обучения" style="width: 100%; height: 100%; object-fit: cover; object-position: center 53%;">
+            </div>
+            
+            <div class="concept-text">
+                <p>Я являюсь приверженцем концепции <strong>Lifelong Learning</strong>, что дословно переводится как «обучение длиною в жизнь».</p>
+                <p>Мы живем в эпоху стремительных изменений, поэтому моя главная задача как тренера — не просто передать знания, а развить способность учеников к <strong>метаобучению</strong> (умение эффективно учиться, анализировать свои когнитивные процессы и интегрировать знания в реальную жизнь, формируя новые навыки).</p>
+                <p>Я убеждена, что именно через выявление своего потенциала и развитие личной эффективности каждый сотрудник может внесить максимальный вклад в командный результат.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Блок 4: Темы обучения -->
+        <section id="topics">
+            <h2 class="section-title">Темы обучения</h2>
+            <p><strong>ЛИЧНАЯ ЭФФЕКТИВНОСТЬ</strong> — стратегия управления ресурсами для реализации внутреннего потенциала.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>I. Развитие гибких навыков</h3>
+                    <ul>
+                        <li>эффективный менеджмент</li>
+                        <li>тайм-менеджмент</li>
+                        <li>искусство коммуникации</li>
+                        <li>обретение уверенности</li>
+                        <li>достижение целей</li>
+                        <li>анализ, прогноз, стратегия</li>
+                        <li>делегирование задач ассистентам Ai</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>II. Управление командой</h3>
+                    <ul>
+                        <li>делегирование</li>
+                        <li>обучение и адаптация</li>
+                        <li>мотивация</li>
+                        <li>целеполагание и планирование</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>III. Хард скиллы в продажах</h3>
+                    <ul>
+                        <li>определение целевой аудитории</li>
+                        <li>выявление потребности клиента</li>
+                        <li>коммерческое предложение</li>
+                        <li>работа с возражениями</li>
+                        <li>увеличение конверсии</li>
+                        <li>работа с ключевыми клиентами</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Блок 5: Дополнительные возможности и Цены -->
+        <section id="prices">
+            <h2 class="section-title">Дополнительные возможности</h2>
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                <div>
+                    <ul style="list-style: none; line-height: 2;">
+                        <li>• Мастер–майнды</li>
+                        <li>• Мозговые штурмы</li>
+                        <li>• Подготовка к работе на выставках</li>
+                        <li>• Модерация стратегических сессий</li>
+                        <li>• Стартовая аттестация + анализ</li>
+                        <li>• Итоговая аттестация + анализ</li>
+                        <li>• Посттренинговое и межсессионное сопровождение</li>
+                        <li>• Индивидуальные консультации</li>
+                        <li>• Авторская разработка программы под запрос</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="price-box" style="margin-top: 0;">
+                        <h3>Гибкие решения под ваш бюджет</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Стоимость обучения зависит от глубины фокусной работы и размера группы</p>
+                        <ul class="price-list">
+                            <li><span>Малая группа (до 8 чел.)</span> <strong>от 7.000 руб. / 3ч.</strong></li>
+                            <li><span>Средняя группа (9-16 чел.)</span> <strong>от 9.000 руб. / 3ч.</strong></li>
+                            <li><span>Большая группа (17–25 чел.)</span> <strong>от 12.000 руб / 3ч.</strong></li>
+                            <li><span>Аттестация + анализ</span> <strong>от 1.000 руб. / чел.</strong></li>
+                            <li><span>Индивидуальные сессии</span> <strong>от 1.800 руб. / 1ч.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Блок 6: Контакты -->
+    <section id="contacts">
+        <div class="container">
+            <h2>СВЯЗАТЬСЯ СО МНОЙ</h2>
+            <p style="margin-top: 10px;">С радостью готова ответить на все вопросы и обсудить ваши встречные предложения о сотрудничестве.</p>
+            <p style="margin-top: 20px; font-weight: bold;">С искренним уважением, ОЛЬГА ШАХОВА</p>
+            <p style="font-size: 0.9rem; opacity: 0.9;">Специалист по продажам и управлению | Тренер Soft & Hard Skills</p>
+            
+            <div class="contact-info">
+                <p>Email: <a href="mailto:reason_project@mail.ru">reason_project@mail.ru</a></p>
+                <p>Тел.: <strong>8 963 348 13 90</strong></p>
+                <p>г. Санкт-Петербург</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
